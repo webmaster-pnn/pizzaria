@@ -1,0 +1,137 @@
+
+#card-img img{
+	max-width: 100%!important;
+    position: relative;
+    cursor: pointer;
+    border: 5px solid rosybrown;
+}
+#card-profile{
+	margin-top: 30px;
+}
+#center{
+	flex-direction: column;
+}
+figure{
+	
+	text-align: center;
+	padding-top: 10px;
+	
+}
+#label{
+	     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 92%;
+    bottom: 55%;
+}
+#label i{
+       font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    color: #212529;
+    background: rosybrown;
+ 
+    border-radius: 25px;
+    width: 24px;
+    height: 24px;
+    line-height: 1.6!important;
+}
+	
+}
+#up-foto i:hover{
+
+}
+
+
+
+
+ @media screen and (min-width: 1024px){
+	#label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 98%;
+    bottom: 50%;
+	}
+	#label i{
+    font-size: 35px;
+    cursor: pointer;
+    position: relative;
+    color: #212529;
+    background: rosybrown;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 1.5!important;
+	}
+	
+}
+@media screen and (max-width: 1023px){
+	#label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 97%;
+    bottom: 50%;
+	}
+	#label i{
+		    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    color: #212529;
+    background: rosybrown;
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
+    line-height: 1.5!important;
+	}
+	
+}
+@media screen and (max-width: 767px){
+	#label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 96%;
+    bottom: 50%;
+	}
+	#label i{
+		    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    color: #212529;
+    background: rosybrown;
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
+    line-height: 1.5!important;
+	}
+}
+
+@media screen and (max-width: 330px){
+	#label{
+	
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 94%;
+    bottom: 52%;
+		
+	}
+	#label i{
+		    font-size: 21px;
+    cursor: pointer;
+    position: relative;
+    color: #212529;
+    background: rosybrown;
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+    line-height: 1.7!important;
+	}
+}

@@ -1,0 +1,27 @@
+{
+    "name": "pizzaria/projeto",
+    "description": "projeto curso tecnico",
+    "authors": [
+        {
+            "name": "carlos henrique",
+            "email": "machadopnn@gmail.com"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "~3.1",
+        "phpmailer/phpmailer": "~6.0"
+    },
+    "config":{
+        "vendor-dir" : "lib"
+    },
+    "psr-4": {
+            "App\\" : "../app/"
+
+        },
+    "autoload":{
+         "classmap" : ["app/model/"]
+    }
+       
+        
+    
+}

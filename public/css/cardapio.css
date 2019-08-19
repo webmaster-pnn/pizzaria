@@ -1,0 +1,40 @@
+
+#main{
+    background-color: #fffcea!important;
+    
+}
+#title-cardapio{
+    margin-top: 40px;
+}
+#title-cardapio h1, #title-cardapio h5{
+    text-align: center;
+    color: #896304 !important;
+}
+#title-cardapio h5{
+    opacity: 0.5;
+}
+
+.card{
+    margin: 40px;
+}
+.card-header img{
+    max-width: 100%;
+}
+.fo{
+    width: 380px;
+}
+.fo img{
+    max-width: 100%;
+}
+.modal-exit{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: last baseline;
+    
+}
+.modal-content{
+    overflow: hidden;
+    width: 380px;
+}

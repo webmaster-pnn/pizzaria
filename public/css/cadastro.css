@@ -1,0 +1,11 @@
+#formulario{
+	width: 75%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.help-block
+{
+    display:none;
+    color: red;
+}

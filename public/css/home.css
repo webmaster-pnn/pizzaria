@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+/*#################################################################  CABEÇALHO ####################################################################################################*/
+header{
+    background-color:rgba(37, 20, 8, 1)!important;
+}
+.help-block
+{
+    display:none;
+    color: red;
+}
+.nav-mod{
+    width: 90%;
+    margin: 0 auto;
+    background-color:rgba(37, 20, 8, 1)!important;
+    
+}
+.menu-mod{
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+}
+.text-mod li{
+    padding-right: 40px;
+    margin-top: 10px;
+    
+
+}
+.text-mod li a{
+    font-size: 20px;
+}
+.text-mod li a:hover{
+    color: #896304!important;
+}
+.text-mod li.active a{
+    color: #896304!important;
+}
+.login{
+    padding-top: 17px;
+}
+.login li a{
+    font-size: 14px;
+}
+#login{
+        border-radius: 9px;
+        border: 1px solid;
+
+
+}
+.btn-login{
+        background-color: #130a04;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+}
+#cadastro_login{
+    text-align: center;
+}
+#cadastro_login a{
+    font-size: 14px;
+    color: black;
+    opacity: 0.5;
+
+}
+.userInfo{
+    height: 50px;
+}
+.userInfo a{
+        display: inline!important;
+}
+.userInfo a span{
+    color: #928982;
+}
+.userInfo a img{
+    width: 50px;
+    border-radius: 10% !important;
+    box-shadow: 2px 0px 8px 1px #735d4b;
+}
+
+
+
+.userDrop a{
+    padding-left: 10px!important;
+}
+.dropdown-menu{
+     width: 1px!important;
+}
+/*############################################################### FIM CABEÇALHO ###################################################################################################*/
+
+
+/*############################################################# CORPO DA PAGINA #################################################################################################*/
+main{
+    min-height: 1000px;
+}
+section{
+    overflow: hidden;
+}
+.titulo-sessao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+}
+
+.sessao-1{
+    width: 100%;
+    background-color: rgba(139,75,3,0.43);
+}
+#sessao-foto{
+    max-width: 100%;
+}
+.artigo h5{
+    text-align: center;
+    margin-top: 15px;
+}
+.artigo p{
+    text-align: center;
+}
+.sessao-3{
+   
+
+}
+.sessao-cardapio{
+    z-index: 57;
+    width: 54%;
+    height: auto;
+    background-color: #7A1514;
+    opacity: 0.95;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 1px 1px 15px;
+   
+}
+.sessao-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px;
+}
+.sessao-img img{
+    max-width: 100%;
+}
+#link{
+
+    font-size: 33px;
+    color: #896304;
+    font-family: cursive; 
+}
+#sessao-title{
+
+    text-align: center;
+    color: #896304;
+    font-family: cursive;
+    font-size: 60px;
+}
+#sessao-corpo{
+    padding: 70px;
+    font-size: 33px;
+    color: white;
+    font-family: cursive;
+    text-align: justify;
+}
+@media screen and (max-width:980px){
+
+.sessao-cardapio{
+    z-index: 57;
+    width: 60%;
+    height: auto;
+    background-color: #7A1514;
+    opacity: 0.95;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 1px 1px 15px;
+}
+#sessao-corpo{
+    padding: 20px;
+    font-size: 33px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: white;
+    font-family: cursive;
+    text-align: justify;
+}
+#sessao-title {
+    text-align: center;
+    color: #896304;
+    font-family: cursive;
+    font-size: 62px;
+}
+}
+
+@media screen and (max-width:450px){
+    .sessao-cardapio{
+        z-index: 46;
+        width: 78%;
+        height: auto;
+        background-color: #7A1514;
+        opacity: 0.95;
+        margin: 0 auto;
+        border-radius: 14px;
+        box-shadow: 1px 1px 15px;
+    }
+    .sessao-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+    }
+    #link{
+
+        font-size: 25px;
+        color: #896304;
+        font-family: cursive;
+    }
+    #sessao-title{
+    
+        text-align: center;
+        color: #896304;
+        font-family: cursive;
+        font-size: 35px;
+    }
+    #sessao-corpo{
+        padding: 14px;
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 25px;
+        color: white;
+        font-family: cursive;
+        text-align: justify;
+    }
+}
+
+
+/*############################################################# FIM CORPO DA PAGINA #################################################################################################*/
+
+/*############################################################# RODAPÉ DA PAGINA #################################################################################################*/
+
+.footer-1{
+    height: 230px;
+    position: static;
+    background-color: #251408;
+}
+.footer-2{
+    height: 87px;
+    background-color: #140a03;
+    position: static;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*############################################################# FIM RODAPÉ DA PAGINA #################################################################################################*/
