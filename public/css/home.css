@@ -43,13 +43,20 @@ header{
 .login{
     padding-top: 17px;
 }
+.login li.active a{
+    color: #896304!important;
+}
 .login li a{
     font-size: 14px;
+    text-align: center;
 }
 #login{
         border-radius: 9px;
         border: 1px solid;
-
+    }
+.login li a:hover {
+     color: #896304!important;
+}
 
 }
 .btn-login{

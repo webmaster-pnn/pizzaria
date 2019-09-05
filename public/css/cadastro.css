@@ -1,11 +1,18 @@
 #formulario{
 	width: 75%;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 110px;
+    margin-bottom: 110px;
 }
 .help-block
 {
     display:none;
     color: red;
+}
+#button-align{
+	display: flex;
+}
+#button-align button{
+	width: 200px;
+	margin: 0 auto;
 }

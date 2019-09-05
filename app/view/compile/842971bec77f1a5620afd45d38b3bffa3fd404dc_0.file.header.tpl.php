@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-16 01:35:59
+/* Smarty version 3.1.33, created on 2019-09-05 22:58:24
   from 'C:\xampp\htdocs\pizzaria\app\view\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d55ec5f3d2b50_13405851',
+  'unifunc' => 'content_5d7176f042f4c4_24235296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '842971bec77f1a5620afd45d38b3bffa3fd404dc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pizzaria\\app\\view\\header.tpl',
-      1 => 1565912155,
+      1 => 1567717102,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d55ec5f3d2b50_13405851 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d7176f042f4c4_24235296 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<?php ';
 echo '?>';?>
 <!DOCTYPE html>
@@ -135,8 +135,8 @@ image/logo.png" alt="" >
                         <a  class="nav-link"  href="<?php echo $_smarty_tpl->tpl_vars['PAGE_CADASTRO']->value;?>
 ">Cadastre-se</a>
                     </li>
-                    <li class="nav-item">
-                        <a  class="nav-link" id="login" href="login"  data-toggle="" data-target="">Login</a>
+                    <li class="nav-item" name="login" id="login">
+                        <a  class="nav-link"  href="login">Login</a>
                     </li>
                 </ul>
             </div>

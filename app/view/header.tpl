@@ -1,3 +1,4 @@
+
 <?php ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -90,8 +91,8 @@
                     <li class="nav-item" name="cadastro">
                         <a  class="nav-link"  href="{$PAGE_CADASTRO}">Cadastre-se</a>
                     </li>
-                    <li class="nav-item">
-                        <a  class="nav-link" id="login" href="login"  data-toggle="" data-target="">Login</a>
+                    <li class="nav-item" name="login" id="login">
+                        <a  class="nav-link"  href="login">Login</a>
                     </li>
                 </ul>
             </div>
