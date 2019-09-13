@@ -24,21 +24,16 @@ class Cadastro
 		$sexo = addslashes($_POST['sexo']);
 		$cpf = addslashes($_POST['cpf']);
 		$nasc = addslashes($_POST['nasc']);
-		$tel = addslashes($_POST['tel']);
-		$cel = addslashes($_POST['cel']);
-		$Endereço = addslashes($_POST['Endereço']);
-		$bairro =addslashes($_POST['bairro']);
-		$cidade = addslashes($_POST['cidade']);
-		$estado = addslashes($_POST['estado']);
-		$cep = addslashes($_POST['cep']);
+		
+		
 
 				
-		$conexao->insertDB("pessoas", "?,?,?,?,?,?,?,?,?,?,?,?",array('', $nome, $sobrenome, $sexo, $nasc, $cpf, $tel, $cel, $email, $senha,'C', 'user'));
+		$conexao->insertDB("tb_pessoas", "?,?,?,?,?,?,?",array('', $nome, $sobrenome, $nasc, $email, $sexo,  $cpf));
 		
-		$id1 = $conexao->recuperaId('pes_id', 'pessoas');
+		$id1 = $conexao->recuperaId('id_pessoa', 'tb_pessoas');
 
-		$conexao->insertDB("enderecos", "?,?,?,?,?,?,?",array('', $cep, $Endereço, $bairro, $cidade, $estado, $id1));
-		$conexao->Authent($email, $senha);
+		$conexao->insertDB("tb_usuarios", "?,?,?,?,?" , array('', md5($senha), 'Usuario', 'user', $id1 ));
+		$conexao->Authent($email, md5($senha));
 
 
 		if ($_SESSION['status'] == "online") {

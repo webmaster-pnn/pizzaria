@@ -89,15 +89,15 @@ class Conexao{
 
 	function Authent($email, $senha){
 
-		self::ExecuteSql("SELECT * FROM pessoas where pes_email = '$email' AND pes_senha = '$senha'");
+		self::ExecuteSql("SELECT * FROM tb_pessoas, tb_usuarios where pes_email = '$email' AND user_senha = '$senha'");
 		
 		if (self::TotalDados() > 0) {
 
 				$idSelect = $this->ListarDados();
-				$_SESSION['id_usuario'] = $idSelect['pes_id'];
+				$_SESSION['id_usuario'] = $idSelect['id_pessoa'];
 				$_SESSION['nome_usuario'] = $idSelect['pes_email'];
-				$_SESSION['senha_usuario'] = $idSelect['pes_senha'];
-				$_SESSION['user_img'] = $idSelect['pes_img'];
+				$_SESSION['senha_usuario'] = $idSelect['user_senha'];
+				$_SESSION['user_img'] = $idSelect['user_img'];
 				$_SESSION['cli_nome'] = $idSelect['pes_nome'];
 				$_SESSION['cli_sobrenome'] = $idSelect['pes_sobrenome'];
 				$_SESSION['status'] = 'online';

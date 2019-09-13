@@ -1,4 +1,5 @@
-<?php ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{$GET_PUBLIC}image/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="{$GET_PUBLIC}node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="{$GET_PUBLIC}node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{$GET_PUBLIC}css/home.css">
     <link rel="stylesheet" href="{$GET_PUBLIC}css/{$GET_CSS}.css">
 
-  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
     <script src="https://kit.fontawesome.com/376bbefc47.js"></script>
     <script src="{$GET_PUBLIC}js/login.js"></script>
 
@@ -30,7 +32,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-mod">
 
 
-            <a class="navbar-brand" href="{$PAGE_HOME}">
+            <a class="navbar-brand" href="{$PAGE_HOME}" style="padding: 0;">
 
                 <img src="{$GET_PUBLIC}image/logo.png" alt="" >
             </a>
@@ -90,8 +92,8 @@
                     <li class="nav-item" name="cadastro">
                         <a  class="nav-link"  href="{$PAGE_CADASTRO}">Cadastre-se</a>
                     </li>
-                    <li class="nav-item">
-                        <a  class="nav-link" id="login" href="login"  data-toggle="" data-target="">Login</a>
+                    <li class="nav-item" name="login" id="login">
+                        <a  class="nav-link"  href="login">Login</a>
                     </li>
                 </ul>
             </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-16 01:35:59
+/* Smarty version 3.1.33, created on 2019-09-13 22:08:43
   from 'C:\xampp\htdocs\pizzaria\app\view\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d55ec5f3d2b50_13405851',
+  'unifunc' => 'content_5d7bf74be92a44_17594686',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '842971bec77f1a5620afd45d38b3bffa3fd404dc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pizzaria\\app\\view\\header.tpl',
-      1 => 1565912155,
+      1 => 1568405321,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d55ec5f3d2b50_13405851 (Smarty_Internal_Template $_smarty_tpl) {
-echo '<?php ';
-echo '?>';?>
+function content_5d7bf74be92a44_17594686 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -34,14 +34,15 @@ echo '?>';?>
     <link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['GET_PUBLIC']->value;?>
 image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['GET_PUBLIC']->value;?>
-node_modules/bootstrap/dist/css/bootstrap.css">
+node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['GET_PUBLIC']->value;?>
 css/home.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['GET_PUBLIC']->value;?>
 css/<?php echo $_smarty_tpl->tpl_vars['GET_CSS']->value;?>
 .css">
 
-  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
     <?php echo '<script'; ?>
  src="https://kit.fontawesome.com/376bbefc47.js"><?php echo '</script'; ?>
 >
@@ -65,7 +66,7 @@ js/login.js"><?php echo '</script'; ?>
 
 
             <a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['PAGE_HOME']->value;?>
-">
+" style="padding: 0;">
 
                 <img src="<?php echo $_smarty_tpl->tpl_vars['GET_PUBLIC']->value;?>
 image/logo.png" alt="" >
@@ -135,8 +136,8 @@ image/logo.png" alt="" >
                         <a  class="nav-link"  href="<?php echo $_smarty_tpl->tpl_vars['PAGE_CADASTRO']->value;?>
 ">Cadastre-se</a>
                     </li>
-                    <li class="nav-item">
-                        <a  class="nav-link" id="login" href="login"  data-toggle="" data-target="">Login</a>
+                    <li class="nav-item" name="login" id="login">
+                        <a  class="nav-link"  href="login">Login</a>
                     </li>
                 </ul>
             </div>

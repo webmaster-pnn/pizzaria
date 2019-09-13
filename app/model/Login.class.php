@@ -11,7 +11,7 @@ class Login{
 
 
 				$conexao = new Conexao();
-				$retorno = $conexao->Authent("$email", "$senha");
+				$retorno = $conexao->Authent("$email", md5("$senha"));
 				
 				return $retorno;
 		

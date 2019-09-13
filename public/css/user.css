@@ -11,10 +11,13 @@
 #center{
 	flex-direction: column;
 }
-figure{
+#figure{
 	
 	text-align: center;
 	padding-top: 10px;
+        background: blue;
+    width: 260px;
+    height: 260px;
 	
 }
 #label{
@@ -46,6 +49,18 @@ figure{
 
 
 
+#user-main{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+#user-main li{
+    list-style: none;
+    padding-right: 40px;
+}
+#user-main li a{
+    text-decoration: none;
+}
  @media screen and (min-width: 1024px){
 	#label{
     display: flex;
