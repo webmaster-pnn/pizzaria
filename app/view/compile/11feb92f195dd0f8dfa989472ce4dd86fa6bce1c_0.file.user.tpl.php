@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-13 22:14:47
+/* Smarty version 3.1.33, created on 2019-09-14 01:02:26
   from 'C:\xampp\htdocs\pizzaria\app\view\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d7bf8b704d900_27351815',
+  'unifunc' => 'content_5d7c200220f992_25086166',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '11feb92f195dd0f8dfa989472ce4dd86fa6bce1c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pizzaria\\app\\view\\user.tpl',
-      1 => 1568405680,
+      1 => 1568415702,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d7bf8b704d900_27351815 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d7c200220f992_25086166 (Smarty_Internal_Template $_smarty_tpl) {
 ?><main>
 <section>
-  <div class="container" style="height: 900px;display: flex;">
+  <div class="row" style="height: 900px;display: flex;">
 
-    <div style=" width: 30%;height: 100%;">
+    <div class="col-lg-4">
     
+       <div class="col-lg-12 col-md-12" id="photo-position">
         <figure id="figure">
-          <!-- <img  src="<?php echo $_smarty_tpl->tpl_vars['SITE_USER']->value;?>
+          <img  src="<?php echo $_smarty_tpl->tpl_vars['SITE_USER']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['ID_USER']->value;?>
 /perfil/<?php echo $_smarty_tpl->tpl_vars['USER_IMG']->value;?>
-" style=" max-width: 100%;"> -->
+" style=" max-width: 100%;">
         </figure> 
+       </div>
 
     
      </div>
-    <div style="width: 70%;height: 100%;">
+    <div class="col-lg-8">
 
         <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#info">Informações Pessoais</a></li>
@@ -47,7 +49,7 @@ function content_5d7bf8b704d900_27351815 (Smarty_Internal_Template $_smarty_tpl)
         <div class="tab-content">
           <div id="info" class="tab-pane fade in active">
 
-                   <form style=" padding: 70px;">
+                   <form style=" padding: 20px;">
                       <div class="form-group">
                         <label for="email">Endereço de email</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" >
