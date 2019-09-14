@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-14 01:02:26
+/* Smarty version 3.1.33, created on 2019-09-14 01:53:17
   from 'C:\xampp\htdocs\pizzaria\app\view\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d7c200220f992_25086166',
+  'unifunc' => 'content_5d7c2bed5c1501_03847866',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '11feb92f195dd0f8dfa989472ce4dd86fa6bce1c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pizzaria\\app\\view\\user.tpl',
-      1 => 1568415702,
+      1 => 1568418795,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d7c200220f992_25086166 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d7c2bed5c1501_03847866 (Smarty_Internal_Template $_smarty_tpl) {
 ?><main>
-<section>
+<section id="section">
   <div class="row" style="height: 900px;display: flex;">
 
     <div class="col-lg-4">
@@ -52,22 +52,20 @@ function content_5d7c200220f992_25086166 (Smarty_Internal_Template $_smarty_tpl)
                    <form style=" padding: 20px;">
                       <div class="form-group">
                         <label for="email">Endereço de email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" >
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="<?php echo $_smarty_tpl->tpl_vars['USER_EMAIL']->value;?>
+" >
                         
                       </div>
-                      <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha" >
-                      </div>
+                      
 
                       <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="txt" class="form-control" id="nome"  value="<?php echo $_smarty_tpl->tpl_vars['CLI_NOME']->value;?>
+                        <input type="txt" class="form-control" id="nome"  value="<?php echo $_smarty_tpl->tpl_vars['USER_NOME']->value;?>
 ">
                       </div>
                       <div class="form-group">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="txt" class="form-control" id="sobrenome"  value="<?php echo $_smarty_tpl->tpl_vars['CLI_SOBRENOME']->value;?>
+                        <input type="txt" class="form-control" id="sobrenome"  value="<?php echo $_smarty_tpl->tpl_vars['USER_SOBRENOME']->value;?>
 ">
                       </div>
                       

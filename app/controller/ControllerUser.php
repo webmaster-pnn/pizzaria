@@ -12,7 +12,7 @@ class ControllerUser extends Rotas
 	function __construct()
 	{	
 		$conexao = new Conexao();
-		$conexao->Authent($_SESSION['nome_usuario'], $_SESSION['senha_usuario']);
+	
 			if (isset($_FILES['arquivos'])) {
 				
 				$nome_arquivo = $_FILES['arquivos']['name'];
@@ -28,9 +28,9 @@ class ControllerUser extends Rotas
 				move_uploaded_file($_FILES['arquivos']['tmp_name'],SITE_USER."/".$id_user."/perfil/".$id_user.'.jpg' );
 				
 				
-				$value = 'pes_img='.$id_user ;
-				$id = 'pes_id='.$id_user;
-				$conexao->Authent($_SESSION['nome_usuario'], $_SESSION['senha_usuario']);
+				$value = 'user_img='.$id_user ;
+				$id = 'id_pessoa='.$id_user;
+				
 				$conexao->updateDB('pessoas', $value ,$id, null );
 
 

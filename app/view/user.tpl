@@ -1,5 +1,5 @@
 <main>
-<section>
+<section id="section">
   <div class="row" style="height: 900px;display: flex;">
 
     <div class="col-lg-4">
@@ -26,21 +26,18 @@
                    <form style=" padding: 20px;">
                       <div class="form-group">
                         <label for="email">Endereço de email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" >
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="{$USER_EMAIL}" >
                         
                       </div>
-                      <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha" >
-                      </div>
+                      
 
                       <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="txt" class="form-control" id="nome"  value="{$CLI_NOME}">
+                        <input type="txt" class="form-control" id="nome"  value="{$USER_NOME}">
                       </div>
                       <div class="form-group">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="txt" class="form-control" id="sobrenome"  value="{$CLI_SOBRENOME}">
+                        <input type="txt" class="form-control" id="sobrenome"  value="{$USER_SOBRENOME}">
                       </div>
                       
                       <button type="submit" class="btn btn-primary">Atualizar</button>

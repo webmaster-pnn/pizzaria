@@ -95,11 +95,11 @@ class Conexao{
 
 				$idSelect = $this->ListarDados();
 				$_SESSION['id_usuario'] = $idSelect['id_pessoa'];
-				$_SESSION['nome_usuario'] = $idSelect['pes_email'];
+				$_SESSION['email_usuario'] = $idSelect['pes_email'];
 				$_SESSION['senha_usuario'] = $idSelect['user_senha'];
-				$_SESSION['user_img'] = $idSelect['user_img'];
-				$_SESSION['cli_nome'] = $idSelect['pes_nome'];
-				$_SESSION['cli_sobrenome'] = $idSelect['pes_sobrenome'];
+				$_SESSION['img_usuario'] = $idSelect['user_img'];
+				$_SESSION['nome_usuario'] = $idSelect['pes_nome'];
+				$_SESSION['sobrenome_usuario'] = $idSelect['pes_sobrenome'];
 				$_SESSION['status'] = 'online';
 				
 

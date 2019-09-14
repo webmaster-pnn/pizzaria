@@ -29,12 +29,15 @@ class SmartyConfig extends Smarty{
 			$this->assign('GET_JS', $rotas->get_Js());
 			$this->assign('GET_CSS', $rotas->get_Css());
 			$this->assign('SESSAO', $this->sessaoAtiva());
-			$this->assign('ID_USER', $this->idUser());
-			$this->assign('USER_NOME', $this->nomeUser());
-			$this->assign('CLI_NOME', $this->cliNome());
-			$this->assign('CLI_SOBRENOME', $this->cliSobrenome());
-			$this->assign('USER_IMG', $this->userImg());
-			$this->assign('SITE_USER', $this->siteUser());
+
+			$this->assign('ID_USER', $this->userId());					//ID DO USUARIO
+			$this->assign('USER_EMAIL', $this->userEmail());			//EMAIL DO USUARIO
+			$this->assign('USER_NOME', $this->userNome());				//NOME DO USUARIO
+			$this->assign('USER_SOBRENOME', $this->userSobrenome()); 	//SOBRENOME DO USUARIO
+			$this->assign('USER_IMG', $this->userImg());				//IMAGEM DO USUARIO
+
+
+			$this->assign('SITE_USER', $this->siteUser());    		 	 //PASTA DOS USUARIOS
 			$this->assign('PRO', $cardapio->GetItens());
 						
 
@@ -47,33 +50,33 @@ class SmartyConfig extends Smarty{
 	 			return true;
 	 		}
 	 	}
-	 	function idUser(){
+	 	function userId(){
 	 		if (isset($_SESSION['id_usuario'])) {
 	 			return $_SESSION['id_usuario'];
 	 		}
 	 	}
-	 	function nomeUser(){
+	 	function userEmail(){
+	 		if (isset($_SESSION['email_usuario'])) {
+	 			return $_SESSION['email_usuario'];
+	 		}
+	 	}
+	 	
+	 	function userNome(){
 	 		if (isset($_SESSION['nome_usuario'])) {
 	 			return $_SESSION['nome_usuario'];
 	 		}
 	 	}
-	 	
-	 	function cliNome(){
-	 		if (isset($_SESSION['cli_nome'])) {
-	 			return $_SESSION['cli_nome'];
-	 		}
-	 	}
-	 	function cliSobrenome(){
-	 		if (isset($_SESSION['cli_sobrenome'])) {
-	 			return $_SESSION['cli_sobrenome'];
+	 	function userSobrenome(){
+	 		if (isset($_SESSION['sobrenome_usuario'])) {
+	 			return $_SESSION['sobrenome_usuario'];
 	 		}
 	 	}
 	 	function userImg(){
-	 		if (isset($_SESSION['user_img'])) {
-	 			if (file_exists(SITE_USER."/".$_SESSION['id_usuario']."/perfil/".$_SESSION['user_img'].'.jpg')) {
-	 				return $_SESSION['user_img'].'.jpg';
-	 			}else if (file_exists(SITE_USER."/".$_SESSION['id_usuario']."/perfil/".$_SESSION['user_img'].'.png')) {
-	 				return $_SESSION['user_img'].'.png';
+	 		if (isset($_SESSION['img_usuario'])) {
+	 			if (file_exists(SITE_USER."/".$_SESSION['id_usuario']."/perfil/".$_SESSION['img_usuario'].'.jpg')) {
+	 				return $_SESSION['img_usuario'].'.jpg';
+	 			}else if (file_exists(SITE_USER."/".$_SESSION['id_usuario']."/perfil/".$_SESSION['img_usuario'].'.png')) {
+	 				return $_SESSION['img_usuario'].'.png';
 	 			}
 	 			
 	 		}

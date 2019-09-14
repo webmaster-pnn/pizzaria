@@ -11,7 +11,9 @@
 #center{
 	flex-direction: column;
 }
-
+#section{
+    margin-top: 20px;
+}
 #label{
 	     display: flex;
     flex-direction: column;
