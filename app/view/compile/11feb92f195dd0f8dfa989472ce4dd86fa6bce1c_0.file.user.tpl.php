@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-14 01:53:17
+/* Smarty version 3.1.33, created on 2019-09-14 02:26:02
   from 'C:\xampp\htdocs\pizzaria\app\view\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d7c2bed5c1501_03847866',
+  'unifunc' => 'content_5d7c339ab83fe4_88025600',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '11feb92f195dd0f8dfa989472ce4dd86fa6bce1c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pizzaria\\app\\view\\user.tpl',
-      1 => 1568418795,
+      1 => 1568420761,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d7c2bed5c1501_03847866 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d7c339ab83fe4_88025600 (Smarty_Internal_Template $_smarty_tpl) {
 ?><main>
 <section id="section">
   <div class="row" style="height: 900px;display: flex;">
@@ -42,14 +42,15 @@ function content_5d7c2bed5c1501_03847866 (Smarty_Internal_Template $_smarty_tpl)
 
         <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#info">Informações Pessoais</a></li>
-          <li><a data-toggle="tab" href="#menu1">Ultimas Compras</a></li>
-          <li><a data-toggle="tab" href="#menu2">Em Andamento</a></li>
+          <li><a data-toggle="tab" href="#menu1">Endereço</a></li>
+          <li><a data-toggle="tab" href="#menu2">Compras Realizadas</a></li>
+          <li><a data-toggle="tab" href="#menu3">Compras em Andamento</a></li>
         </ul>
 
         <div class="tab-content">
           <div id="info" class="tab-pane fade in active">
 
-                   <form style=" padding: 20px;">
+                   <form style=" padding: 20px;" >
                       <div class="form-group">
                         <label for="email">Endereço de email</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="<?php echo $_smarty_tpl->tpl_vars['USER_EMAIL']->value;?>
@@ -73,7 +74,41 @@ function content_5d7c2bed5c1501_03847866 (Smarty_Internal_Template $_smarty_tpl)
                    </form>
 
           </div>
+
           <div id="menu1" class="tab-pane fade">
+
+            <form style=" padding: 20px;" >
+               <div class="form-group">
+                 <label for="cep">CEP</label>
+                 <input type="txt" class="form-control" id="cep" >
+                 
+               </div>
+               
+
+               <div class="form-group">
+                 <label for="end">Logradouro</label>
+                 <input type="txt" class="form-control" id="end" >
+               </div>
+
+               <div class="form-group">
+                 <label for="bairro">Bairro</label>
+                 <input type="txt" class="form-control" id="bairro"  >
+               </div>
+
+               <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="txt" class="form-control" id="cidade"  >
+              </div>
+              <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="txt" class="form-control" id="estado"  >
+              </div>
+               
+               <button type="submit" class="btn btn-primary">Atualizar</button>
+            </form>
+
+         </div>
+          <div id="menu2" class="tab-pane fade">
             
                        <table class="table">
                         <thead>
@@ -107,7 +142,7 @@ function content_5d7c2bed5c1501_03847866 (Smarty_Internal_Template $_smarty_tpl)
                       </table>
 
           </div>
-          <div id="menu2" class="tab-pane fade">
+          <div id="menu3" class="tab-pane fade">
               
               <table class="table">
                         <thead>

@@ -16,14 +16,15 @@
 
         <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#info">Informações Pessoais</a></li>
-          <li><a data-toggle="tab" href="#menu1">Ultimas Compras</a></li>
-          <li><a data-toggle="tab" href="#menu2">Em Andamento</a></li>
+          <li><a data-toggle="tab" href="#menu1">Endereço</a></li>
+          <li><a data-toggle="tab" href="#menu2">Compras Realizadas</a></li>
+          <li><a data-toggle="tab" href="#menu3">Compras em Andamento</a></li>
         </ul>
 
         <div class="tab-content">
           <div id="info" class="tab-pane fade in active">
 
-                   <form style=" padding: 20px;">
+                   <form style=" padding: 20px;" >
                       <div class="form-group">
                         <label for="email">Endereço de email</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="{$USER_EMAIL}" >
@@ -44,7 +45,41 @@
                    </form>
 
           </div>
+
           <div id="menu1" class="tab-pane fade">
+
+            <form style=" padding: 20px;" >
+               <div class="form-group">
+                 <label for="cep">CEP</label>
+                 <input type="txt" class="form-control" id="cep" >
+                 
+               </div>
+               
+
+               <div class="form-group">
+                 <label for="end">Logradouro</label>
+                 <input type="txt" class="form-control" id="end" >
+               </div>
+
+               <div class="form-group">
+                 <label for="bairro">Bairro</label>
+                 <input type="txt" class="form-control" id="bairro"  >
+               </div>
+
+               <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="txt" class="form-control" id="cidade"  >
+              </div>
+              <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="txt" class="form-control" id="estado"  >
+              </div>
+               
+               <button type="submit" class="btn btn-primary">Atualizar</button>
+            </form>
+
+         </div>
+          <div id="menu2" class="tab-pane fade">
             
                        <table class="table">
                         <thead>
@@ -78,7 +113,7 @@
                       </table>
 
           </div>
-          <div id="menu2" class="tab-pane fade">
+          <div id="menu3" class="tab-pane fade">
               
               <table class="table">
                         <thead>
