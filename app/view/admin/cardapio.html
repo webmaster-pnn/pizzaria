@@ -23,13 +23,76 @@
                               
                     <div class="container">
                         <div class="row">
-                        
+                            
+                            
+                              <div class="card col-md-3">
+
+                                    <form method="POST" >
+                                       <!-- foto -->
+                                    <div class="card-header" id="card-header-add">
+                                     
+                                         <label  name="up-foto" for="arquivos"   id="card-img">
+                                          <figure >
+                                            <img src="{$GET_PUBLIC}image/im.png" class="image">
+                                              
+                                          </figure>
+
+                                        </label> 
+
+                                        <input type="file" name="arquivos" id="arquivos" style="display:none;" onchange="previewImagem()">
+                                    </div>
+                                  
+                                    <div class="card-body">
+                                      <!-- titulo -->
+                                      <label for="card-titulo-add">Titulo</label>
+                                      <br>
+                                     <input type="text" name="card-titulo-add" id="card-titulo-add" placeholder="Adicione um titulo" required>
+                                     <!-- descriçao -->
+                                      <label for="card-descricao-add">Descrição</label>
+                                      <br>
+                                     <input type="text" name="card-descricao-add" id="card-descricao-add" placeholder="Adicione uma descrição">
+                                     <!-- preço -->
+                                     <label for="card-preco-add">Preço</label>
+                                      <br>
+                                     <input type="text" name="card-preco-add" id="card-preco-add" pattern="\d\d,\d\d|\d,\d\d" required>
+                                        
+                                       <label>Categoria</label><label style="padding-left: 20px;">Tamanho</label>
+                                      <br>
+                                      <!-- categoria -->
+                                          <select name="categoria">
+                                            {foreach from=$CAT item=C}
+                                            <option>{$C.cat_nome}</option>
+                                             {/foreach}
+                                          </select>
+                                          
+                                          <!-- tamanho -->
+                                        
+                                          <select name="tamanho">
+                                            {foreach from=$TAM item=T}
+                                            <option>{$T.tam_nome}</option>
+                                             {/foreach}
+                                          </select>
+                                      
+                                    </div> 
+
+
+                                
+                                    <div id="card-footer">
+                                      <button type="submit" class="btn btn-primary">
+                                                            Adicionar
+                                      </button>
+                                    </div>
+                                    </form>
+                                </div>
+
+                            
+                             
                             {foreach from=$PRO item=P}
                               {if $P.cat_nome == "massas" }
                   
                                 <div class="card col-md-3">
 
-                                    <label>{$P.cat_nome}</label>
+                                    <label id="label">{$P.cat_nome}</label>
 
                                     <div class="card-header">
                                            <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
@@ -71,7 +134,7 @@
                                        {if $P.cat_nome == "bebidas" }
                       
                                       <div class="card col-md-3">
-                                         <label>{$P.cat_nome}</label>
+                                         <label id="label">{$P.cat_nome}</label>
                                             <div class="card-header">
                                                    <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
                                             </div>

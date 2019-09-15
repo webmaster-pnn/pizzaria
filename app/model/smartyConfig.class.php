@@ -20,6 +20,13 @@ class SmartyConfig extends Smarty{
 	 		$rotas = new Rotas();
 			 $cardapio = new Cardapio();
 			 $cardapio->getProdutos();
+			 $cardapio->getTamanho();
+			 $cardapio->getCategoria();
+			 $this->assign('PRO', $cardapio->GetItens());
+			 $this->assign('TAM', $cardapio->returnTamanho());
+			 $this->assign('CAT', $cardapio->returnCategoria());
+
+
 	 		$this->assign('GET_PUBLIC', $rotas->get_Public());
 			$this->assign('PAGE_HOME', $rotas->page_Home());
 			$this->assign('PAGE_CONTATO', $rotas->page_Contato());
@@ -38,7 +45,7 @@ class SmartyConfig extends Smarty{
 
 
 			$this->assign('SITE_USER', $this->siteUser());    		 	 //PASTA DOS USUARIOS
-			$this->assign('PRO', $cardapio->GetItens());
+			
 						
 
 	 	}

@@ -12,6 +12,13 @@ class ControllerCardapio extends Rotas{
 		
 		
 		$smarty->assign('GET_PUBLIC', $rotas->get_Public());
+
+		if (isset($_POST['card-titulo-add'])) {
+			
+			$nome = $_POST['card-titulo-add'];
+			echo $_POST['arquivos'];
+
+		}
 		
 	}
 

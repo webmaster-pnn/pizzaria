@@ -5,7 +5,7 @@ require_once("../config/config.php");
 class Conexao{
 
 	private $host, $user, $senha, $banco;
-	protected $obj, $itens=array(), $prefix;
+	protected $obj, $itens=array(), $tamanho = array(), $categoria = array(), $prefix;
 
 	function __construct(){
 		$this->host = BD_HOST;
@@ -56,6 +56,13 @@ class Conexao{
 	function GetItens(){
 		return $this->itens;
 	}
+	function returnTamanho(){
+		return $this->tamanho;
+	}
+	function returnCategoria(){
+		return $this->categoria;
+	}
+	
 	
 	function selectDB($fields, $tabela, $where, $params){
 
