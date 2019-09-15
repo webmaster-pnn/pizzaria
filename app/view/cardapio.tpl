@@ -29,20 +29,22 @@
                   
                                 <div class="card col-md-3">
 
+                                    <label>{$P.cat_nome}</label>
+
                                     <div class="card-header">
                                            <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
                                     </div>
                                   
                                     <div class="card-body">
                                 
-                                      <h1>{$P.prod_nome}</h1>
-                                      <p>{$P.prod_preco}</p>
+                                      <h1 id="card-title">{$P.prod_nome}</h1>
+                                      <p>{$P.prod_descricao}</p>
                                 
                                 
                                     </div> 
 
                                 
-                                    <div class="card-footer">
+                                    <div id="card-footer">
                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php $modal = 'modal_1'; echo $modal; ?>">
                                                             Pedir
                                       </button>
@@ -69,19 +71,20 @@
                                        {if $P.cat_nome == "bebidas" }
                       
                                       <div class="card col-md-3">
+                                         <label>{$P.cat_nome}</label>
                                             <div class="card-header">
                                                    <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
                                             </div>
                                       
                                             <div class="card-body">
                                           
-                                              <h1>{$P.prod_nome}</h1>
-                                              <p>{$P.prod_preco}</p>
+                                              <h1 id="card-title">{$P.prod_nome}</h1>
+                                              
                                           
                                           
                                             </div> 
                                       
-                                            <div class="card-footer">
+                                           <div id="card-footer">
                                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php $modal = 'modal_1'; echo $modal; ?>">
                                                                       Pedir
                                               </button>

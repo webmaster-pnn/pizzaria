@@ -97,6 +97,7 @@ class Conexao{
 				$_SESSION['id_usuario'] = $idSelect['id_pessoa'];
 				$_SESSION['email_usuario'] = $idSelect['pes_email'];
 				$_SESSION['senha_usuario'] = $idSelect['user_senha'];
+				$_SESSION['permissao_usuario'] = $idSelect['user_permissao'];
 				$_SESSION['img_usuario'] = $idSelect['user_img'];
 				$_SESSION['nome_usuario'] = $idSelect['pes_nome'];
 				$_SESSION['sobrenome_usuario'] = $idSelect['pes_sobrenome'];

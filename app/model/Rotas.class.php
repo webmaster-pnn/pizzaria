@@ -41,6 +41,55 @@ class Rotas{
     public function template(){
         $smarty = new SmartyConfig();
         $smarty->rotasConfig();
+        if (isset($_SESSION['permissao_usuario'] )) {
+           if ($_SESSION['permissao_usuario'] == "administrador") {
+                switch($_GET['url']){ 
+            case 'ambiente': 
+            return $smarty->display('../app/view/admin/ambiente.tpl'); 
+            break;
+            case 'cardapio';
+            return $smarty->display('../app/view/admin/cardapio.tpl'); 
+            break;
+            case 'contato';
+            return $smarty->display('../app/view/admin/contato.tpl'); 
+            break;
+             case 'cadastro';
+            return $smarty->display('../app/view/admin/cadastro.tpl'); 
+            break;
+            case 'user';
+            return $smarty->display('../app/view/admin/user.tpl'); 
+            break;
+            case 'login';
+            return $smarty->display('../app/view/admin/login.tpl'); 
+            break;
+            default: 
+            return $smarty->display('../app/view/admin/home.tpl'); 
+            }
+           }else{
+            switch($_GET['url']){ 
+            case 'ambiente': 
+            return $smarty->display('../app/view/ambiente.tpl'); 
+            break;
+            case 'cardapio';
+            return $smarty->display('../app/view/cardapio.tpl'); 
+            break;
+            case 'contato';
+            return $smarty->display('../app/view/contato.tpl'); 
+            break;
+             case 'cadastro';
+            return $smarty->display('../app/view/cadastro.tpl'); 
+            break;
+            case 'user';
+            return $smarty->display('../app/view/user.tpl'); 
+            break;
+            case 'login';
+            return $smarty->display('../app/view/login.tpl'); 
+            break;
+            default: 
+            return $smarty->display('../app/view/home.tpl'); 
+            }
+           }
+        }else{
          switch($_GET['url']){ 
             case 'ambiente': 
             return $smarty->display('../app/view/ambiente.tpl'); 
@@ -63,6 +112,7 @@ class Rotas{
             default: 
             return $smarty->display('../app/view/home.tpl'); 
             }
+        }
     }
 
        public function get_Public(){
@@ -92,7 +142,7 @@ class Rotas{
             return 'ambiente'; 
             break;
             case 'cardapio';
-            return 'cardapio2';
+            return 'cardapio3';
             break;
             case 'contato';
             return 'contato';
