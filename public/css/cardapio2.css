@@ -3,6 +3,7 @@
     background-color: #fffcea!important;
     
 }
+
 #title-cardapio{
     margin-top: 40px;
 }
@@ -37,4 +38,12 @@
 .modal-content{
     overflow: hidden;
     width: 380px;
+}
+
+#nav-tab{
+    background-color:red;
+}
+.nav{
+    width: 80%;
+    margin: 0 auto;
 }

@@ -92,7 +92,7 @@ class Rotas{
             return 'ambiente'; 
             break;
             case 'cardapio';
-            return 'cardapio';
+            return 'cardapio2';
             break;
             case 'contato';
             return 'contato';
