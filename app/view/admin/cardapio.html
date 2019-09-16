@@ -27,7 +27,7 @@
                             
                               <div class="card col-md-3">
 
-                                    <form method="POST" >
+                                    <form method="POST" enctype="multipart/form-data">
                                        <!-- foto -->
                                     <div class="card-header" id="card-header-add">
                                      
@@ -60,17 +60,21 @@
                                       <br>
                                       <!-- categoria -->
                                           <select name="categoria">
-                                            {foreach from=$CAT item=C}
-                                            <option>{$C.cat_nome}</option>
-                                             {/foreach}
+                                            
+                                            <option>Massas</option>
+                                             
                                           </select>
                                           
                                           <!-- tamanho -->
                                         
                                           <select name="tamanho">
                                             {foreach from=$TAM item=T}
+                                            {if $T.tam_nome == '350ml'}
+                                            {else}
                                             <option>{$T.tam_nome}</option>
+                                            {/if}
                                              {/foreach}
+                                            }
                                           </select>
                                       
                                     </div> 
@@ -95,7 +99,7 @@
                                     <label id="label">{$P.cat_nome}</label>
 
                                     <div class="card-header">
-                                           <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
+                                           <img src="{$GET_PUBLIC}image/massas/{$P.prod_img}" alt="">
                                     </div>
                                   
                                     <div class="card-body">
@@ -130,13 +134,74 @@
                       
                       <div class="row">
 
+                              <div class="card col-md-3">
+
+                                    <form method="POST" enctype="multipart/form-data">
+                                       <!-- foto -->
+                                    <div class="card-header" id="card-header-add">
+                                     
+                                         <label  name="up-foto" for="arquivos"   id="card-img">
+                                          <figure >
+                                            <img src="{$GET_PUBLIC}image/im.png" class="image2">
+                                              
+                                          </figure>
+
+                                        </label> 
+
+                                        <input type="file" name="arquivos2" id="arquivos2" style="display:none;" onchange="previewImagem2()">
+                                    </div>
+                                  
+                                    <div class="card-body">
+                                      <!-- titulo -->
+                                      <label for="card-titulo-add">Titulo</label>
+                                      <br>
+                                     <input type="text" name="card-titulo-add" id="card-titulo-add" placeholder="Adicione um titulo" required>
+                                     <!-- preço -->
+                                     <label for="card-preco-add">Preço</label>
+                                      <br>
+                                     <input type="text" name="card-preco-add" id="card-preco-add" pattern="\d\d,\d\d|\d,\d\d" required>
+                                        
+                                       <label>Categoria</label><label style="padding-left: 20px;">Tamanho</label>
+                                      <br>
+                                      <!-- categoria -->
+                                          <select name="categoria">
+                                           
+                                            <option>Bebidas</option>
+                                           
+                                          </select>
+                                          
+                                          <!-- tamanho -->
+                                        
+                                          <select name="tamanho">
+                                            {foreach from=$TAM item=T}
+                                            {if $T.tam_nome == '350ml'}
+                                            <option>{$T.tam_nome}</option>
+                                            {else}
+                                            
+                                            {/if}
+                                             {/foreach}
+                                            }
+                                          </select>
+                                      
+                                    </div> 
+
+
+                                
+                                    <div id="card-footer">
+                                      <button type="submit" class="btn btn-primary">
+                                                            Adicionar
+                                      </button>
+                                    </div>
+                                    </form>
+                                </div>
+
                                 {foreach from=$PRO item=P}
                                        {if $P.cat_nome == "bebidas" }
                       
                                       <div class="card col-md-3">
                                          <label id="label">{$P.cat_nome}</label>
                                             <div class="card-header">
-                                                   <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
+                                                   <img src="{$GET_PUBLIC}image/bebidas/{$P.prod_img}" alt="">
                                             </div>
                                       
                                             <div class="card-body">

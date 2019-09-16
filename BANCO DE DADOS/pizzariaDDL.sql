@@ -60,3 +60,41 @@ CREATE TABLE pessoas_endereco(
     constraint fk_pessoas foreign key(pessoas_id) references tb_pessoas(id_pessoa) on delete cascade,
     constraint fk_logradouro foreign key(logradouro_id) references tb_logradouro(id_logradouro) on delete cascade
 ); 
+
+CREATE TABLE tb_categoria(
+	id_categoria integer primary key auto_increment,
+    cat_nome varchar(30) not null
+);
+
+CREATE TABLE tb_tamanho(
+	id_tamanho integer primary key auto_increment,
+    tam_nome varchar(30) not null
+);
+CREATE TABLE tb_produtos(
+	id_produto integer primary key auto_increment,
+    prod_nome varchar(45) not null,
+    prod_descricao text ,
+    prod_preco varchar(15) not null,
+    prod_img varchar(32) not null,
+	prod_ativo tinyint(1) not null,
+    tamanho_id int not null,
+    categoria_id int not null,
+    constraint fk_tamanho foreign key (tamanho_id) references tb_tamanho(id_tamanho) on delete cascade,
+    constraint fk_categoria foreign key (categoria_id) references tb_categoria(id_categoria) on delete cascade
+);
+
+CREATE TABLE tb_pedidos(
+	id_pedido integer primary key auto_increment,
+    ped_status varchar(20) not null,
+    ped_data date not null,
+    ped_qtd int not null,
+    produto_id int not null,
+    constraint fk_produto foreign key (produto_id) references tb_produtos(id_produto) on delete cascade
+);
+
+CREATE TABLE pessoas_pedidos(
+	pessoa_id int not null,
+    pedido_id int not null,
+    constraint fk_pes foreign key (pessoa_id) references tb_pessoas(id_pessoa) on delete cascade,
+    constraint fk_pedido foreign key (pedido_id) references tb_pedidos(id_pedido) on delete cascade
+);
