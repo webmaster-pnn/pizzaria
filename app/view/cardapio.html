@@ -32,7 +32,7 @@
                                     <label>{$P.cat_nome}</label>
 
                                     <div class="card-header">
-                                           <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
+                                           <img src="{$GET_PUBLIC}image/massas/{$P.prod_img}" alt="">
                                     </div>
                                   
                                     <div class="card-body">
@@ -73,7 +73,7 @@
                                       <div class="card col-md-3">
                                          <label>{$P.cat_nome}</label>
                                             <div class="card-header">
-                                                   <img src="{$GET_PUBLIC}image/{$P.prod_img}.png" alt="">
+                                                   <img src="{$GET_PUBLIC}image/bebidas/{$P.prod_img}" alt="">
                                             </div>
                                       
                                             <div class="card-body">

@@ -30,9 +30,7 @@ class ControllerCardapio extends Rotas{
 				
 			$foto = $_FILES['arquivos']['name'];
 			$nome = filter_input(INPUT_POST, 'card-titulo-add', FILTER_SANITIZE_SPECIAL_CHARS);
-			if (isset($_POST['card-descricao-add'])) {
-				$desc = filter_input(INPUT_POST, 'card-descricao-add', FILTER_SANITIZE_SPECIAL_CHARS);
-			}
+			$desc = filter_input(INPUT_POST, 'card-descricao-add', FILTER_SANITIZE_SPECIAL_CHARS);
 			$preco .= filter_input(INPUT_POST, 'card-preco-add', FILTER_SANITIZE_SPECIAL_CHARS);
 			$categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);
 			$tamanho = filter_input(INPUT_POST, 'tamanho', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -43,17 +41,17 @@ class ControllerCardapio extends Rotas{
 			$idTamanho = $conexao->ListarDados();
 			
 
-					if ($categoria == "Massas") {
+					if ($categoria == "massas") {
 						// insert massas
 						$conexao->insertDB("tb_produtos", "?,?,?,?,?,?,?,?",array('', $nome, $desc, $preco, $foto, $ativo, $idTamanho['id_tamanho'],  1));
-					} else{
+					} else if($categoria == "bebidas"){
 						// insert bebidas
 						$conexao->insertDB("tb_produtos", "?,?,?,?,?,?,?,?",array('', $nome, null , $preco, $foto, $ativo, $idTamanho['id_tamanho'],  2));
 					}
 			
 
 			// movendo a foto para a pasta publica de imagens
-			if ($categoria == 'Massas') {
+			if ($categoria == 'massas') {
 				move_uploaded_file($_FILES['arquivos']['tmp_name'],SITE_IMG."/massas/".$foto);
 			} else {
 				move_uploaded_file($_FILES['arquivos']['tmp_name'],SITE_IMG."/bebidas/".$foto);

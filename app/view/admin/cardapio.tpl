@@ -60,21 +60,20 @@
                                       <br>
                                       <!-- categoria -->
                                           <select name="categoria">
-                                            
-                                            <option>Massas</option>
-                                             
+                                            {foreach from=$CAT item=C}
+                                            <option>{$C.cat_nome}</option>
+                                             {/foreach}
                                           </select>
                                           
                                           <!-- tamanho -->
                                         
                                           <select name="tamanho">
                                             {foreach from=$TAM item=T}
-                                            {if $T.tam_nome == '350ml'}
-                                            {else}
+                                          
                                             <option>{$T.tam_nome}</option>
-                                            {/if}
+                                            
                                              {/foreach}
-                                            }
+                                            
                                           </select>
                                       
                                     </div> 
@@ -89,6 +88,7 @@
                                     </form>
                                 </div>
 
+                                <!-- cardapio foreach -->
                             
                              
                             {foreach from=$PRO item=P}
@@ -134,66 +134,7 @@
                       
                       <div class="row">
 
-                              <div class="card col-md-3">
-
-                                    <form method="POST" enctype="multipart/form-data">
-                                       <!-- foto -->
-                                    <div class="card-header" id="card-header-add">
-                                     
-                                         <label  name="up-foto" for="arquivos"   id="card-img">
-                                          <figure >
-                                            <img src="{$GET_PUBLIC}image/im.png" class="image2">
-                                              
-                                          </figure>
-
-                                        </label> 
-
-                                        <input type="file" name="arquivos2" id="arquivos2" style="display:none;" onchange="previewImagem2()">
-                                    </div>
-                                  
-                                    <div class="card-body">
-                                      <!-- titulo -->
-                                      <label for="card-titulo-add">Titulo</label>
-                                      <br>
-                                     <input type="text" name="card-titulo-add" id="card-titulo-add" placeholder="Adicione um titulo" required>
-                                     <!-- preço -->
-                                     <label for="card-preco-add">Preço</label>
-                                      <br>
-                                     <input type="text" name="card-preco-add" id="card-preco-add" pattern="\d\d,\d\d|\d,\d\d" required>
-                                        
-                                       <label>Categoria</label><label style="padding-left: 20px;">Tamanho</label>
-                                      <br>
-                                      <!-- categoria -->
-                                          <select name="categoria">
-                                           
-                                            <option>Bebidas</option>
-                                           
-                                          </select>
-                                          
-                                          <!-- tamanho -->
-                                        
-                                          <select name="tamanho">
-                                            {foreach from=$TAM item=T}
-                                            {if $T.tam_nome == '350ml'}
-                                            <option>{$T.tam_nome}</option>
-                                            {else}
-                                            
-                                            {/if}
-                                             {/foreach}
-                                            }
-                                          </select>
-                                      
-                                    </div> 
-
-
-                                
-                                    <div id="card-footer">
-                                      <button type="submit" class="btn btn-primary">
-                                                            Adicionar
-                                      </button>
-                                    </div>
-                                    </form>
-                                </div>
+                              
 
                                 {foreach from=$PRO item=P}
                                        {if $P.cat_nome == "bebidas" }
