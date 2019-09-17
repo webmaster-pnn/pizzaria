@@ -5,9 +5,19 @@
     <div class="col-lg-4">
     
        <div class="col-lg-12 col-md-12" id="photo-position">
-        <figure id="figure">
-          <img  src="{$SITE_USER}/{$ID_USER}/perfil/{$USER_IMG}" style=" max-width: 100%;">
-        </figure> 
+       <form method="POST"   enctype="multipart/form-data">
+        <label  name="up-foto" for="arquivos"   id="card-img">
+          <figure id="figure">
+            <img  src="{$SITE_USER}/{$ID_USER}/perfil/{$USER_IMG}" style=" max-width: 100%;" class="image">
+              
+          </figure>
+
+        </label> 
+
+        <input type="file" name="arquivos" id="arquivos" style="display:none;" onchange="previewImagem()">
+        
+       <center><button type="submit" class="btn btn-primary">Trocar Foto</button></center> 
+       </form>
        </div>
 
     
@@ -24,21 +34,21 @@
         <div class="tab-content">
           <div id="info" class="tab-pane fade in active">
 
-                   <form style=" padding: 20px;" >
+                   <form  method="POST" style=" padding: 20px;">
                       <div class="form-group">
                         <label for="email">Endereço de email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="{$USER_EMAIL}" >
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="{$USER_EMAIL}" >
                         
                       </div>
                       
 
                       <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="txt" class="form-control" id="nome"  value="{$USER_NOME}">
+                        <input type="txt" class="form-control" id="nome" name="nome" value="{$USER_NOME}">
                       </div>
                       <div class="form-group">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="txt" class="form-control" id="sobrenome"  value="{$USER_SOBRENOME}">
+                        <input type="txt" class="form-control" id="sobrenome" name="sobrenome" value="{$USER_SOBRENOME}">
                       </div>
                       
                       <button type="submit" class="btn btn-primary">Atualizar</button>
