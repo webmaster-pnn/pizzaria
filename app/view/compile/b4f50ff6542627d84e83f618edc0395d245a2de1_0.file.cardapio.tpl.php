@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-17 00:43:08
+/* Smarty version 3.1.33, created on 2019-09-17 02:40:45
   from 'C:\xampp\htdocs\pizzaria\app\view\cardapio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d800ffc16f921_13204459',
+  'unifunc' => 'content_5d802b8d4eb6c3_27559267',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b4f50ff6542627d84e83f618edc0395d245a2de1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pizzaria\\app\\view\\cardapio.tpl',
-      1 => 1568673785,
+      1 => 1568680843,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d800ffc16f921_13204459 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d802b8d4eb6c3_27559267 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <main id="main">
     <section>
@@ -56,7 +56,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
                   
                                 <div class="card col-md-3">
 
-                                    <label><?php echo $_smarty_tpl->tpl_vars['P']->value['cat_nome'];?>
+                                    <label id="label"><?php echo $_smarty_tpl->tpl_vars['P']->value['cat_nome'];?>
 </label>
 
                                     <div class="card-header">
@@ -110,7 +110,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
                                        <?php if ($_smarty_tpl->tpl_vars['P']->value['cat_nome'] == "bebidas") {?>
                       
                                       <div class="card col-md-3">
-                                         <label><?php echo $_smarty_tpl->tpl_vars['P']->value['cat_nome'];?>
+                                         <label id="label"><?php echo $_smarty_tpl->tpl_vars['P']->value['cat_nome'];?>
 </label>
                                             <div class="card-header">
                                                    <img src="<?php echo $_smarty_tpl->tpl_vars['GET_PUBLIC']->value;?>

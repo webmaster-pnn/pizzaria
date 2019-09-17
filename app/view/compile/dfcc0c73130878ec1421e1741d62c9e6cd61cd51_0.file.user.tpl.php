@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-09-17 02:18:54
+/* Smarty version 3.1.33, created on 2019-09-17 02:37:28
   from 'C:\xampp\htdocs\pizzaria\app\view\admin\user.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d80266e74fe76_90235148',
+  'unifunc' => 'content_5d802ac8a4e548_59108682',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dfcc0c73130878ec1421e1741d62c9e6cd61cd51' => 
     array (
       0 => 'C:\\xampp\\htdocs\\pizzaria\\app\\view\\admin\\user.tpl',
-      1 => 1568679532,
+      1 => 1568680503,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d80266e74fe76_90235148 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d802ac8a4e548_59108682 (Smarty_Internal_Template $_smarty_tpl) {
 ?><main>
 <section id="section">
   <div class="row" style="height: 900px;display: flex;">
@@ -87,31 +87,31 @@ function content_5d80266e74fe76_90235148 (Smarty_Internal_Template $_smarty_tpl)
 
           <div id="menu1" class="tab-pane fade">
 
-            <form style=" padding: 20px;" >
+            <form method="POST" style=" padding: 20px;" >
                <div class="form-group">
                  <label for="cep">CEP</label>
-                 <input type="txt" class="form-control" id="cep" >
+                 <input type="txt" class="form-control" id="cep" name="cep" >
                  
                </div>
                
 
                <div class="form-group">
                  <label for="end">Logradouro</label>
-                 <input type="txt" class="form-control" id="end" >
+                 <input type="txt" class="form-control" id="end" name="end">
                </div>
 
                <div class="form-group">
                  <label for="bairro">Bairro</label>
-                 <input type="txt" class="form-control" id="bairro"  >
+                 <input type="txt" class="form-control" id="bairro" name="bairro" >
                </div>
 
                <div class="form-group">
                 <label for="cidade">Cidade</label>
-                <input type="txt" class="form-control" id="cidade"  >
+                <input type="txt" class="form-control" id="cidade"  name="cidade">
               </div>
               <div class="form-group">
                 <label for="estado">Estado</label>
-                <input type="txt" class="form-control" id="estado"  >
+                <input type="txt" class="form-control" id="estado"  name="estado">
               </div>
                
                <button type="submit" class="btn btn-primary">Atualizar</button>
