@@ -64,6 +64,8 @@ class ControllerUser extends Rotas
 				$cidade = filter_input(INPUT_POST, 'cidade', FILTER_SANITIZE_SPECIAL_CHARS);
 				$estado = filter_input(INPUT_POST, 'estado', FILTER_SANITIZE_SPECIAL_CHARS);
 
+				
+
 			}
 			
 

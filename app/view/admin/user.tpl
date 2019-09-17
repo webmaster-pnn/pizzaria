@@ -58,31 +58,31 @@
 
           <div id="menu1" class="tab-pane fade">
 
-            <form style=" padding: 20px;" >
+            <form method="POST" style=" padding: 20px;" >
                <div class="form-group">
                  <label for="cep">CEP</label>
-                 <input type="txt" class="form-control" id="cep" >
+                 <input type="txt" class="form-control" id="cep" name="cep" >
                  
                </div>
                
 
                <div class="form-group">
                  <label for="end">Logradouro</label>
-                 <input type="txt" class="form-control" id="end" >
+                 <input type="txt" class="form-control" id="end" name="end">
                </div>
 
                <div class="form-group">
                  <label for="bairro">Bairro</label>
-                 <input type="txt" class="form-control" id="bairro"  >
+                 <input type="txt" class="form-control" id="bairro" name="bairro" >
                </div>
 
                <div class="form-group">
                 <label for="cidade">Cidade</label>
-                <input type="txt" class="form-control" id="cidade"  >
+                <input type="txt" class="form-control" id="cidade"  name="cidade">
               </div>
               <div class="form-group">
                 <label for="estado">Estado</label>
-                <input type="txt" class="form-control" id="estado"  >
+                <input type="txt" class="form-control" id="estado"  name="estado">
               </div>
                
                <button type="submit" class="btn btn-primary">Atualizar</button>
